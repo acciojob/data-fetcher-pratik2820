@@ -4,9 +4,6 @@ import React,{useEffect, useState} from "react";
 import axios from "axios";
 
 
-
-
-
 const Display = () =>{
 
 
@@ -29,10 +26,6 @@ const Display = () =>{
         console.log(error);
     })
    }
-    
-
-
-
     return(
         <div>
             <h1>Display here</h1>
