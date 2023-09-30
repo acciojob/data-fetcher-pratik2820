@@ -9,6 +9,7 @@ const Display = () =>{
 
     const[data,setData]=useState([]);
     const[loading,setLoading]=useState(false)
+    const[errorMistake,setErrorMistake]=useState("")
     
 
     useEffect(()=>{
@@ -23,20 +24,25 @@ const Display = () =>{
         setLoading(true)
         console.log(response.data.products);
     }).catch((error)=>{
-        console.log(error);
+        setErrorMistake("An error occurred")
     })
    }
     return(
         <div>
-            <h1>Display here</h1>
+            <h1>Data Fetched from API</h1>
             {
                 loading && <pre>
 
                     {JSON.stringify(data,null,2)}
 
-
-
                 </pre>
+
+            }
+            {
+            errorMistake && <h2>An error occurred</h2>
+            }
+            {
+                data ? [] :<h2></h2>
             }
 
         </div>
