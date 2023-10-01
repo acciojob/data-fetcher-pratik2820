@@ -27,6 +27,7 @@ const Display = () =>{
         setErrorMistake("An error occurred")
     })
    }
+   
     return(
         <div>
             <h1>Data Fetched from API</h1>
